@@ -10,8 +10,6 @@
 
     <properties>
         <webdriver.chrome>src/main/resources/chromedriver</webdriver.chrome>
-        <aspectj.version>1.8.0</aspectj.version>
-        <allure.version>1.5.2</allure.version>
     </properties>
 
     <dependencies>
@@ -21,12 +19,6 @@
         <artifactId>testng</artifactId>
         <version>6.11</version>
     </dependency>
-
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>21.0</version>
-        </dependency>
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
