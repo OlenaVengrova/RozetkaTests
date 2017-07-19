@@ -4,10 +4,10 @@ In this test project I used Selenium WebDriver, Page Object pattern, Temp Mail s
 
 MainPage, RegistrationPage and UserProfilePage are classes which contain methods responsible for managing according sections on www.rozetka.com.ua
 
-DriverBindings s an utility class for more convenient work with Selenium WebDriver.
+DriverBindings is an utility class for more convenient work with Selenium WebDriver.
 
-TempMail class is an utility class for using all goodness of temp mail service 
+TempMail class is an utility class for using all goodness of Temp Mail service 
 
 RegistrationTest is a test class which uses all previously mentioned classes for testing registration on   www.rozetka.com.ua. It uses TestNg annotation and assertion. 
 
-To run tests please execute the following command “mvn test” in terminal
+To run test please execute the following command “mvn test” in terminal
