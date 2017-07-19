@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import pages.MainPage;
 import pages.RegistrationPage;
 import pages.UserProfilePage;
 import utils.DriverBindings;
@@ -19,6 +20,7 @@ import java.util.regex.Pattern;
 public class RegistrationTest {
 
     private WebDriver driver;
+    private MainPage mainPage;
     private RegistrationPage registrationPage;
     private UserProfilePage userProfilePage;
 
@@ -32,6 +34,7 @@ public class RegistrationTest {
     public void setUp() throws InterruptedException, IOException {
         driver = new ChromeDriver();
         DriverBindings drB = new DriverBindings(driver);
+        mainPage = new MainPage(drB);
         registrationPage = new RegistrationPage(drB);
         userProfilePage = new UserProfilePage(drB);
     }
@@ -48,7 +51,7 @@ public class RegistrationTest {
 
         driver.get(ROZETKA_URL);
 
-        registrationPage.openRegistrationForm();
+        mainPage.openRegistrationForm();
         registrationPage.performRegistration("test", emailAddress, "Qwerty12345");
 
         driver.get(getEmailActivationUrl(emailAddress));
